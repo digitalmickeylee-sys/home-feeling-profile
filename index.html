@@ -358,8 +358,7 @@ svg.map g.you text{fill:var(--paper);font-size:12px}
 <body class="at-cover">
 <div class="grain" aria-hidden="true"></div>
 <div class="prog" aria-hidden="true"></div>
-<header class="bar">
-<meta name="robots" content="noindex, nofollow"><div class="brand">居家感受檔案<small>2026 V1</small></div><div class="step" id="step"></div></header>
+<header class="bar"><div class="brand">居家感受檔案<small>2026 V1</small></div><div class="step" id="step"></div></header>
 <main id="app"></main>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -1047,8 +1046,7 @@ function renderResult(){
  const n=new Date();const date=`${n.getFullYear()}.${String(n.getMonth()+1).padStart(2,"0")}.${String(n.getDate()).padStart(2,"0")}`;
  const sec=two&&Object.keys(S.c[1]).length?["III","IV","V","VI"]:["II","III","IV","V"];
  return `<section class="page" data-p="result"><div class="wrap">
-  <header class="r-head">
-<meta name="robots" content="noindex, nofollow"><div class="kick"><span>${VER}</span><span>${date}</span></div>
+  <header class="r-head"><div class="kick"><span>${VER}</span><span>${date}</span></div>
    <h2>你的居家<br>感受檔案</h2>
    ${a.F1?`<p class="quote">「${esc(a.F1)}」</p>`:`<p class="quote">三個方向，三張材質拼貼。風格名稱只是參考，主角是拼貼裡的光和質地。</p>`}
    <div class="kw">${kw.map(k=>`<span>${esc(k)}</span>`).join("")}</div>
