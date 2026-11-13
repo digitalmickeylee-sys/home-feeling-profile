@@ -1131,7 +1131,7 @@ function renderResult(){
  const cf=confText(r);
  const boards=top.map(x=>board(x.s,c));
  const dirs=top.map((x,i)=>{const b=boards[i];return `<article class="dir${i%2?" alt":""}">
-  <div class="meta"><div class="n">${tieK.has(x.s.k)?"並列":"0"+(i+1)}</div><h4>${x.s.n}</h4><div class="ref">${x.s.en}</div>
+  <div class="meta"><div class="n">0${i+1}</div><h4>${x.s.n}${tieK.has(x.s.k)?`<small style="font-size:.45em;letter-spacing:.1em;margin-left:.6em;padding:.15em .5em;border:1px solid currentColor;vertical-align:middle">並列</small>`:""}</h4><div class="ref">${x.s.en}</div>
   <p class="mood">${x.s.mood}</p>
   <h6>為什麼推薦給你</h6>
   <ul>${reasonList(x,c).map(t=>`<li>${esc(t)}</li>`).join("")||"<li>你的感受答案還不多，先當參考方向</li>"}</ul>
@@ -1169,7 +1169,7 @@ function renderResult(){
   <div class="sec-t" style="margin-top:0;border-top:0;padding-top:0"><b>I</b><h3>美感：三個方向</h3></div>
   <div class="mapbox"><div>${mapSvg(c,top)}</div><div class="mapnote"><h5>感受座標</h5><p>「你」是依你在「你喜歡的感覺」一章的答案算出的位置；13 個點是各風格的位置，編號 1～3 是推薦給你的方向。離你越近，感受越接近。</p><p class="note">座標軸為本工具編輯整理，方向參考，不是診斷。</p></div></div>
   ${tieK.size?`<div class="pair"><b>這幾個方向都適合你：</b>${esc(r.tie.map(o=>o.s.n).join("、"))}。程式逐題替換你的答案重算，改一題名次就會對調，所以不排先後。${pn?esc(pn):""}</div>`:`<p class="note">名次穩定：程式逐題替換你的答案重算，改任一題都不會換第一名。</p>`}
-  ${cf.length?`<div class="pair conf"><b>這兩項看起來衝突，和設計師先談：</b><ul>${cf.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><span class="note">工具沒有把衝突的答案互相抵消，衝突的部分先不計分。</span></div>`:""}
+  ${cf.length?`<div class="pair conf"><b>這兩項看起來衝突，和設計師先談：</b><ul style="margin:6px 0 4px 1.2em;padding:0">${cf.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><span class="note">工具沒有把衝突的答案互相抵消，衝突的部分先不計分。</span></div>`:""}
   ${(k=>k.length?`<p class="note">依你的文字推測（只小幅加分）：${esc(k.map(h=>`${h.q} 寫了「${h.w}」→偏${AXN[h.x]}`).concat(r.filter(o=>o.kw).slice(0,3).map(o=>`${o.kw.q} 寫了「${o.kw.w}」→接近${o.s.n}`)).join("；"))}</p>`:r.some(o=>o.kw)?`<p class="note">依你的文字推測（只小幅加分）：${esc(r.filter(o=>o.kw).slice(0,3).map(o=>`${o.kw.q} 寫了「${o.kw.w}」→接近${o.s.n}`).join("；"))}</p>`:"")(r.an.kwUsed||[])}
   ${dirs}
   <div class="excl"><h5>為什麼不是這兩種</h5><ul>${exc.map(o=>`<li><b>${o.s.n}</b>分數最低：${esc(o.t)}</li>`).join("")}</ul></div>
