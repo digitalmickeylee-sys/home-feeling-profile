@@ -65,6 +65,8 @@ body.at-cover .bar,body.at-cover .prog{opacity:0;pointer-events:none}
 .btn:hover .arr{transform:translateX(6px)}
 .btn.solid{background:var(--ink);color:var(--paper)}
 .btn.solid:hover{background:var(--clay);border-color:var(--clay)}
+.dlrow{margin-top:18px;display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px}.dlrow .btn{padding:12px 22px;font-size:14px}.dlrow small{font-size:13px;color:var(--mute);letter-spacing:.08em}
+@media print{.dlrow{display:none!important}}
 .link{font-size:13px;letter-spacing:.14em;color:var(--ink2);border-bottom:1px solid var(--line);padding-bottom:2px}
 .resume{display:none;margin-left:18px}
 
@@ -787,6 +789,9 @@ let LSOK=true;try{localStorage.setItem(LS+"_t","1");localStorage.removeItem(LS+"
 function save(){try{localStorage.setItem(LS,JSON.stringify(S))}catch(e){LSOK=false}}
 /* FB／LINE／IG 內建瀏覽器：常擋剪貼簿、不能列印 */
 const IN_APP=/FBAN|FBAV|FB_IAB|Instagram|\bLine\//i.test(navigator.userAgent);
+/* 2026-11-13 下載鈕：只有線上網址才顯示；離線檔本身就是單檔，不用再下載 */
+const ONLINE=/^https?:$/.test(location.protocol);
+const DL_NAME="居家感受檔案_2026_V1.html";
 function A(){return S.a}
 /* 沒開「兩人分開答」時一律寫第一位，避免關掉 A4 後答案寫進看不到的第二位 */
 function C(i){return S.c[i==null?(S.a.A4?S.who:0):i]}
@@ -815,6 +820,7 @@ function renderCover(){
      <button class="btn solid" data-go="A">開始填寫 <span class="arr">→</span></button>
      ${started?`<button class="link" style="margin-left:22px" data-go="${S.page&&S.page!=="cover"?S.page:"A"}">接著上次填</button><button class="link" style="margin-left:18px" data-reset>重新開始</button>`:""}
     </div>
+    ${ONLINE?`<div class="dlrow"><button class="btn" data-dl>下載這個工具 <span class="arr">↓</span></button><small>建議用電腦下載</small></div>`:""}
    </div>
   </div>
   <figure class="img"><img src="${IMG.cover}" alt="午後的光穿過亞麻窗簾"><figcaption>Light through linen.</figcaption></figure>
@@ -1283,6 +1289,19 @@ function printHint(){
   <p>也可以直接截圖這一頁保存。</p>
   <div class="row"><button class="btn solid" data-close>知道了</button></div>`);
 }
+/* 下載這個工具：重新抓一次本頁原始檔（含內嵌照片，不是填過的畫面），存成單一 HTML 檔，離線也能開 */
+function dlTool(){
+ if(IN_APP){modal("dlhint",`<h5>FB／LINE 裡不能下載檔案</h5>
+  <p>請點右上角「⋯」→「用瀏覽器開啟」（iPhone 選「在 Safari 中開啟」）再按一次。建議用電腦下載：存成一個檔案，之後沒網路也能開。</p>
+  <div class="row"><button class="btn solid" data-close>知道了</button></div>`);return}
+ if(!ONLINE){toast("你開的已經是離線檔，不用再下載");return}
+ toast("下載準備中…");
+ fetch(location.href.split("#")[0],{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.text()}).then(h=>{
+  const u=URL.createObjectURL(new Blob([h],{type:"text/html;charset=utf-8"})),a=document.createElement("a");
+  a.href=u;a.download=DL_NAME;a.rel="noopener";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),60000);
+  toast("已下載："+DL_NAME);
+ }).catch(()=>toast("下載失敗，請重新整理後再試"));
+}
 /* 從內建瀏覽器帶過來的答案（#s=…）：讀進來後把網址清乾淨 */
 let FROM_HASH=false;
 (function(){const h=location.hash;if(h.indexOf("#s=")!==0)return;
@@ -1297,6 +1316,7 @@ document.addEventListener("click",e=>{
  if(t.hasAttribute("data-close")){closeModal();return}
  if(t.hasAttribute("data-selall")){const ta=$(".modal textarea");if(ta)selAll(ta);return}
  if(t.hasAttribute("data-recopy")){const ta=$("#copybox textarea");if(ta){selAll(ta);let ok=false;try{ok=document.execCommand("copy")===true}catch(e){}if(ok){closeModal();toast("已複製，貼到任一家 AI 就可以")}else toast("還是不行，請長按反白處 →「拷貝」")}return}
+ if(t.hasAttribute("data-dl")){dlTool();return}
  if(t.hasAttribute("data-print")){if(IN_APP)printHint();else window.print();return}
  if(t.dataset.copy){copyText(withAns(t.dataset.copy==="owner"?P_OWNER:P_DESIGNER));return}
  if(t.dataset.who){S.who=+t.dataset.who;save();rerender();return}
