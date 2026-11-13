@@ -473,19 +473,19 @@ const ST=[
   mood:"黑石、水泥、黑鐵與深色木，粗獷、有個性。",pal:["#D9D4CD","#8C8379","#7A3E2B","#232220"],warn:"深色與硬材多，要補足間接照明和軟件，避免回音與壓迫。"},
  {k:"mid",n:"中古 Mid-century",sn:"中古",en:"Mid-century",f:[0,1,0,2,1,1,2,0,1,1,0,1,2,1],fit:["lively"],
   mood:"柚木胡桃、孔雀藍、芥末黃和皮革，熱鬧又有溫度。",pal:["#EADFCB","#C9952F","#7C4A2D","#2F4A3F"],warn:"重點色一兩處就好，全屋都上色容易變成主題餐廳。"},
- {k:"lux",n:"現代輕奢",sn:"輕奢",en:"Quiet Luxury",f:[1,0,0,0,1,0,0,2,1,2,-1,-1,0,2],fit:["energy"],
+ {k:"lux",n:"現代輕奢",sn:"輕奢",en:"Quiet Luxury",f:[2,0,0,0,0,0,0,2,1,2,-1,-1,0,2],/* 11-13 自我考試校正：明亮 1→2、深色 1→0（配色以淺暖灰為底、玻璃透光） */fit:["energy"],
   mood:"大理石、絲絨、香檳金與玻璃透光，精緻而有光澤。",pal:["#F1EEEA","#C9C3BB","#2F4A42","#B89B5E"],warn:"金屬與石材比例抓不好會像樣品屋，留一兩處溫潤材質平衡。"},
  {k:"neo",n:"新古典",sn:"新古典",en:"Neo-classic",f:[0,1,2,1,1,2,1,1,2,1,-1,0,1,2],fit:["lively"],
   mood:"線板、大理石、灰藍絨布與古銅金，優雅、有層次。",pal:["#F2EDE4","#D9CBB5","#7F8C99","#3A3A44"],warn:"線板與裝飾要依天花高度調比例，台灣常見 2.8 米以下的屋高要減量。"},
- {k:"nat",n:"自然療癒",sn:"自然療癒",en:"Natural Retreat",f:[1,1,0,1,0,0,2,1,1,-1,1,2,2,-1],fit:["cozy"],
+ {k:"nat",n:"自然療癒",sn:"自然療癒",en:"Natural Retreat",f:[1,1,0,2,-1,0,2,1,1,-1,2,2,2,-1],/* 11-13 自我考試校正：溫暖 1→2、深色 0→-1（米色編織淺杉木）、土陶 1→2（陶土） */fit:["cozy"],
   mood:"米色編織、淺杉木、苔綠與陶土，像住在一個安靜的林子裡。",pal:["#EEEADF","#B8C0A3","#7D8B6A","#5A4636"],warn:"天然材質要留意防霉與保養，植物要先確認採光與通風。"},
- {k:"cream",n:"奶油風",sn:"奶油",en:"Soft Cream",f:[2,2,-1,2,-2,-1,0,0,2,-1,0,0,2,0],fit:["cozy"],
+ {k:"cream",n:"奶油風",sn:"奶油",en:"Soft Cream",f:[2,1,-1,2,-2,-1,1,0,2,-1,0,0,2,-1],fit:["cozy"],sref:"LINE TODAY 室內設計專題（奶油風：米白奶油色、圓角家具、霧感材質、重留白、淺木輔助）；PRO360 達人網奶油風指南（韓式源起、棉麻軟裝）。屬設計媒體，2026-11-13 校正：木頭 0→1、設計感 0→-1、包覆 2→1",
   mood:"奶白、燕麥色、圓弧和柔軟的絨布，像被一條毯子包住。",pal:["#F6F1E8","#E9DCC8","#D4BFA3","#A88C6E"],warn:"大面積淺色布料要選可拆洗、耐髒的面料，有小孩或毛小孩更要先想。"},
- {k:"french",n:"法式（復古法式）",sn:"法式",en:"French Vintage",f:[1,0,1,1,-1,1,2,1,1,1,-1,0,2,1],fit:["lively"],
+ {k:"french",n:"法式（復古法式）",sn:"法式",en:"French Vintage",f:[1,0,1,1,-1,1,2,2,1,1,0,0,2,1],fit:["lively"],sref:"House & Home〈10 Ways to Bring Parisian Style Into Your Home〉、Homes & Gardens〈What is French country style〉、Apartment Therapy 巴黎公寓專題（人字拼橡木地板、線板、大理石壁爐、米白牆、黃銅與亞麻、石灰牆仿舊）。2026-11-13 校正：石材 1→2、土陶 -1→0",
   mood:"人字拼地板、線板牆、黃銅與亞麻，優雅但住得輕鬆。",pal:["#F3EEE6","#D9CDBB","#9AA58F","#B08A5B"],warn:"線板要依屋高減量；人字拼施工損料較多，預算要先抓。"},
- {k:"zen",n:"新中式／東方禪",sn:"新中式",en:"Modern Oriental",f:[-1,1,-1,1,1,0,2,1,0,0,1,1,0,1],fit:["quiet"],
+ {k:"zen",n:"新中式／東方禪",sn:"新中式",en:"Modern Oriental",f:[-1,1,-1,1,1,1,2,1,0,0,1,1,0,1],fit:["quiet"],sref:"100室內設計〈新中式裝修〉2025-09（格柵、屏風、線條與材質細節、現代利落）；Interior Atlas 室內圖譜 New Chinese（明式比例深色硬木、格柵、月洞門、水墨、對稱）；Renotalk〈New Chinese Style〉（現代版改用中性大地色）。2026-11-13 校正：圖案 0→1（格柵）",
   mood:"深色木、墨色、宣紙透光與一點朱紅，沉靜有秩序。",pal:["#ECE6DA","#A89C8A","#3B3530","#9E3B2C"],warn:"深色木與墨色面積大時要補足間接照明，避免空間顯小。"},
- {k:"resort",n:"度假風（峇里島／南洋）",sn:"度假",en:"Tropical Resort",f:[0,1,1,2,1,1,2,1,1,-2,1,2,0,0],fit:["energy"],
+ {k:"resort",n:"度假風（峇里島／南洋）",sn:"度假",en:"Tropical Resort",f:[0,1,0,2,1,1,2,1,1,-2,1,2,0,0],fit:["energy"],sref:"Home & Decor Singapore〈Interior design styles: Balinese resort-inspired homes〉、Living Spaces〈Bali Interior Design〉、Material Bank〈Balinese Design〉（柚木、藤編竹、火山石、植物為主角、棉麻黃麻、手作陶；現代峇里重留白）。2026-11-13 校正：繁簡 1→0",
   mood:"深柚木、藤編、粗石和大片綠葉，回家像在度假。",pal:["#EEE7DA","#C7B79B","#6B4A32","#3F5A3C"],warn:"台灣潮濕，藤編與麻料要注意防霉；植栽要先確認採光。"}
 ];
 /* 配方檔 v1.1 第 8 節：最近的幾組；前兩名落在這些組合且分差 ≤10% 時並列並區辨 */
@@ -839,59 +839,165 @@ function renderChap(ix){
  </div></section>`;
 }
 
-/* ===== 計分（v1 3.3＋v2） ===== */
-function prefVec(c){
- const p=Object.fromEntries(AX.map(x=>[x,0]));
- if(c.C2==="bright")p.bright+=1;if(c.C2==="dim")p.bright-=1;
- if(c.C2b==="warm")p.warm+=1;if(c.C2b==="white")p.warm-=.5;
- if(c.C2==="dim"&&c.C2b==="warm")p.enclose+=.5;   // 合併判斷：低亮度暖光＝包覆感
- if(c.C2==="bright"&&c.C2b==="white")p.bright+=.5;
- if(c.C3==="open")p.enclose-=1;if(c.C3==="nook")p.enclose+=1;
- if(c.C4==="clean")p.busy-=1;if(c.C4==="full")p.busy+=1;
- (c.C5||[]).forEach(m=>p[m]+=1);
- if(c.C6a==="light")p.dark-=1;if(c.C6a==="deep")p.dark+=1;
- if(c.C6b==="warm")p.warm+=1;if(c.C6b==="cool")p.warm-=1;
- if(c.C7==="plain")p.pattern-=1;if(c.C7==="pattern")p.pattern+=1;
- const n=c.C8||[];if(n.includes("none"))p.nature-=1;else if(n.length)p.nature+=1;
- if(c.C12==="curve")p.curve+=1;if(c.C12==="line")p.curve-=1;
- if(c.C13==="none")p.design-=1;if(c.C13==="some")p.design+=.5;if(c.C13==="bold")p.design+=1;
- return p;
+/* ===== 計分 v2（2026-11-13 Anderson 語音拍板：題目不動，只改計分與結果頁） =====
+   1 多題合成：每個感受軸＝支撐它的幾題訊號加權平均（主題 1、輔助題 0.5、自填文字 0.3；分母至少 1，只有輔助題時效果減半）。
+   2 核心加權：C1 對上風格 +4、C11 討厭命中 −3／−1.5，大於任一細項軸的最大貢獻 2。
+   3 敏感度：逐題替換屋主已答的答案重算，改一題就能換第一名的方向並列。
+   4 矛盾：衝突的兩題直接點出，不互相加減抵消（衝突的軸改為「待談」不計分，或只拿掉交叉輔助題）。
+   5 自填 C9、C10、F1：關鍵字只小幅加分、含否定字的句子跳過，結果標「依你的文字推測」。
+   倍數為本工具設定（研究只支持「核心＞細項」的方向，不給精確倍數），已用 13 份典型屋主答案自我考試校正。 */
+const SCORE_REF=[
+ ["多題合成比單題可靠","DeVellis & Thorpe《Scale Development: Theory and Applications》第5版，SAGE 2021；Nunnally & Bernstein《Psychometric Theory》第3版，1994（Spearman-Brown：題數增加信度提高）","研究"],
+ ["整體感受題（C1）權重較高","Wanous, Reichers & Hudy 1997, J Applied Psychology 82(2):247–252（單題整體評價與多題合成相關 .63，整體題本身就是有效指標）","研究"],
+ ["討厭題（C11）權重較高","Baumeister 等 2001〈Bad is stronger than good〉Review of General Psychology 5(4):323–370；Tversky 1972〈Elimination by aspects〉Psychological Review 79(4):281–299（人先用不能接受的條件刪去選項）","研究"],
+ ["名次不穩就並列","敏感度分析（one-at-a-time）：Saltelli 等《Global Sensitivity Analysis: The Primer》Wiley 2008","研究"],
+ ["倍數（+4、−3、0.5）","本工具設定，用 13 份典型答案自我考試校正，尚未經大規模真人驗證","實務建議"]];
+const W_C1=4,W_DIS=3,W_DIS2=1.5,W_KWS=1,W_KW=.3;
+/* 矛盾規則：when 成立就點出；drop＝拿掉哪些輔助訊號（id），nul＝哪個軸改為待談不計分 */
+const CONF=[
+ {id:"dimlight",when:c=>c.C2==="dim"&&c.C6a==="light",t:"C2 選「柔和偏暗」，C6 卻選「淺而亮」",drop:["x6","x2"]},
+ {id:"brightdeep",when:c=>c.C2==="bright"&&c.C6a==="deep",t:"C2 選「明亮通透」，C6 卻選「深而沉」",drop:["x6","x2"]},
+ {id:"glare",when:c=>c.C2==="bright"&&has(c.C11,"太亮太刺眼"),t:"C2 選「明亮通透」，C11 又討厭「太亮太刺眼」",nul:["bright"]},
+ {id:"dimdark",when:c=>c.C2==="dim"&&has(c.C11,"太暗"),t:"C2 選「柔和偏暗」，C11 又討厭「太暗」",nul:["bright"]},
+ {id:"deepdark",when:c=>c.C6a==="deep"&&has(c.C11,"太暗"),t:"C6 選「深而沉」，C11 又討厭「太暗」",nul:["dark"]},
+ {id:"fullmess",when:c=>c.C4==="full"&&has(c.C11,"太花太亂"),t:"C4 選「擺滿喜歡的東西」，C11 又討厭「太花太亂」",nul:["busy"]},
+ {id:"cleanempty",when:c=>c.C4==="clean"&&has(c.C11,"太空"),t:"C4 選「收乾淨留白」，C11 又討厭「太空」",nul:["busy"]},
+ {id:"cleancollect",when:(c,a)=>c.C4==="clean"&&nColl(a)>=2,t:"C4 選「收乾淨留白」，B7 卻有不少收藏",drop:["b7"]},
+ {id:"patmess",when:c=>c.C7==="pattern"&&has(c.C11,"太花太亂"),t:"C7 選「有圖案」，C11 又討厭「太花太亂」",nul:["pattern"]},
+ {id:"coolcold",when:c=>c.C6b==="cool"&&has(c.C11,"太冷冰冰"),t:"C6 選「冷一點」，C11 又討厭「太冷冰冰」",nul:["warm"]},
+ {id:"stonecold",when:c=>(has(c.C5,"stone")||has(c.C5,"metal"))&&has(c.C11,"太冷冰冰"),t:"C5 喜歡石頭或金屬的手感，C11 又討厭「太冷冰冰」",drop:["coldmat"]},
+ {id:"boldmess",when:c=>c.C13==="bold"&&has(c.C11,"太花太亂"),t:"C13 想要「越有個性越好」，C11 又討厭「太花太亂」"}];
+/* 依題目欄位找選項文字（OPTN 以值為鍵，warm 等值在 C2b／C6b 撞名，2026-11-13） */
+function lab(k,v){if(Array.isArray(v))return v.map(x=>lab(k,x)).join("、");let it=null;CH.forEach(ch=>ch.qs.forEach(q=>{if(q.key===k)it=q;(q.items||[]).forEach(x=>{if(x.key===k)it=x})}));
+ const o=it&&(it.opts||[]).find(o=>Array.isArray(o)&&o[0]===v);if(o)return o[1];if(v==="none"&&it&&it.none)return it.none;return fmt(v)}
+function nColl(a){const v=(a&&a.B7)||[];return v.includes("沒有")?0:v.length+(a&&a.B7o?1:0)}
+/* 自填關鍵字：寧可不加也不誤判。含否定字的句子整句跳過；只認意思明確的詞 */
+const KWA=[[/木地板|原木|木頭|木桌|木造|木屋|實木/,"wood"],[/植物|綠意|盆栽|森林|樹林|樹下|山上|山裡|花園|庭院|綠色/,"nature"],[/陽光|採光|明亮|大窗|透光|亮亮的/,"bright"],
+ [/暖暖|溫暖|夕陽|燭光|暖黃|曬得暖/,"warm"],[/陶|手作|手捏/,"clay"],[/毯子|棉麻|亞麻|軟軟|毛毯/,"fabric"],[/大理石|石材/,"stone"],[/圓弧|拱門|圓角/,"curve"]];
+const KWS=[[/京都|町家|和室|榻榻米|日式/,["japandi"]],[/北歐|丹麥|瑞典|芬蘭|挪威/,["nordic"]],[/峇里|南洋|度假村|villa|Villa|熱帶/,["resort"]],[/巴黎|法國|普羅旺斯|法式/,["french"]],
+ [/茶室|茶館|書法|中式|四合院|古厝|禪寺/,["zen"]],[/工業風|倉庫|loft|Loft|清水模/,["ind"]],[/侘寂|老屋|斑駁/,["wabi"]],[/復古|古著|黑膠/,["mid"]]];
+const NEG=/不|沒|討厭|怕|別|無法|受不了/;
+function kwScan(c,a){
+ const hit={ax:[],st:{}};
+ [["C9",c.C9],["C10",c.C10],["F1",a&&a.F1]].forEach(([q,t])=>{if(!t)return;
+  String(t).split(/[，,。；;、！!？?\n]/).forEach(s=>{s=s.trim();if(!s||NEG.test(s))return;
+   KWA.forEach(([re,x])=>{const m=s.match(re);if(m&&!hit.ax.some(h=>h.x===x))hit.ax.push({x,q,w:m[0]})});
+   KWS.forEach(([re,ks])=>{const m=s.match(re);if(m)ks.forEach(k=>{if(!hit.st[k])hit.st[k]={q,w:m[0]}})})})});
+ return hit;
 }
-function score(c,dislike){
- const p=prefVec(c);
+function analyze(c,a){
+ a=a||(typeof S!=="undefined"&&S.a)||{};c=c||{};
+ const ins=[];const add=(x,v,w,t,id)=>ins.push({x,v,w,t,id:id||""});
+ const L=(id,k)=>`${id} 選了「${lab(k,c[k])}」`,D=t=>`C11 勾了討厭「${t}」`,dis=c.C11||[],d=t=>dis.includes(t);
+ // 明暗：C2 亮度＋C6 深淺＋C11 太暗／太亮太刺眼
+ if(c.C2==="bright")add("bright",1,1,L("C2","C2"));if(c.C2==="dim")add("bright",-1,1,L("C2","C2"));
+ if(c.C2b==="white")add("bright",.5,.5,L("C2","C2b"));
+ if(d("太暗")){add("bright",1,.5,D("太暗"));add("dark",-1,.5,D("太暗"))}
+ if(d("太亮太刺眼"))add("bright",-1,.5,D("太亮太刺眼"));
+ if(c.C6a==="light"){add("dark",-1,1,L("C6","C6a"));add("bright",1,.5,L("C6","C6a"),"x6")}
+ if(c.C6a==="deep"){add("dark",1,1,L("C6","C6a"));add("bright",-1,.5,L("C6","C6a"),"x6")}
+ if(c.C2==="dim")add("dark",1,.5,L("C2","C2"),"x2");if(c.C2==="bright")add("dark",-1,.5,L("C2","C2"),"x2");
+ // 冷暖：C2 色溫＋C6 冷暖＋C11 太冷冰冰
+ if(c.C2b==="warm")add("warm",1,1,L("C2","C2b"));if(c.C2b==="white")add("warm",-.5,1,L("C2","C2b"));
+ if(c.C6b==="warm")add("warm",1,1,L("C6","C6b"));if(c.C6b==="cool")add("warm",-1,1,L("C6","C6b"));
+ if(d("太冷冰冰")){add("warm",1,.5,D("太冷冰冰"));add("metal",-1,.5,D("太冷冰冰"),"coldmat");add("stone",-1,.5,D("太冷冰冰"),"coldmat")}
+ // 繁簡：C4＋C11 太花太亂／太空＋B7 收藏多寡＋C1
+ if(c.C4==="clean")add("busy",-1,1,L("C4","C4"));if(c.C4==="full")add("busy",1,1,L("C4","C4"));
+ if(d("太花太亂"))add("busy",-1,.5,D("太花太亂"));if(d("太空"))add("busy",1,.5,D("太空"));
+ const nc=nColl(a);if(nc>=2)add("busy",1,.5,`B7 有 ${nc} 類收藏`,"b7");else if(has(a.B7,"沒有"))add("busy",-1,.5,"B7 選了「沒有收藏」","b7");
+ if(c.C1==="quiet")add("busy",-1,.5,L("C1","C1"));if(c.C1==="lively")add("busy",1,.5,L("C1","C1"));
+ // 包覆／開闊：C3＋C1（被包住的安心 vs 熱鬧有人氣）＋D5 自己的角落
+ if(c.C3==="open")add("enclose",-1,1,L("C3","C3"));if(c.C3==="nook")add("enclose",1,1,L("C3","C3"));
+ if(c.C1==="cozy")add("enclose",1,.5,L("C1","C1"));if(c.C1==="lively")add("enclose",-1,.5,L("C1","C1"));
+ const d5=(a.D5||[]).filter(x=>x!=="不需要"&&x!=="運動");if(d5.length&&!has(a.D5,"不需要"))add("enclose",1,.5,`D5 想要自己的角落（${d5.join("、")}）`);
+ // 自然感：C8 植物＋C5 材質
+ const n8=c.C8||[];if(n8.includes("none"))add("nature",-1,1,"C8 選了「都不需要」");else if(n8.length)add("nature",1,1,L("C8","C8"));
+ const m5=c.C5||[];m5.forEach(m=>add(m,1,1,`C5 選了「${OPTN[m]||m}」`));
+ if(m5.some(m=>m==="wood"||m==="clay"))add("nature",1,.5,`C5 選了「${m5.map(m=>OPTN[m]||m).join("、")}」`);
+ if(m5.includes("metal")&&!m5.some(m=>m==="wood"||m==="clay"))add("nature",-1,.5,`C5 選了「${OPTN.metal||"金屬"}」`);
+ // 圖案、線條、亮點
+ if(c.C7==="plain")add("pattern",-1,1,L("C7","C7"));if(c.C7==="pattern")add("pattern",1,1,L("C7","C7"));
+ if(d("太花太亂"))add("pattern",-1,.5,D("太花太亂"));
+ if(c.C12==="curve")add("curve",1,1,L("C12","C12"));if(c.C12==="line")add("curve",-1,1,L("C12","C12"));
+ if(c.C13==="none")add("design",-1,1,L("C13","C13"));if(c.C13==="some")add("design",.5,1,L("C13","C13"));if(c.C13==="bold")add("design",1,1,L("C13","C13"));
+ if(d("太像樣品屋"))add("design",-1,.5,D("太像樣品屋"));
+ if(c.C1==="energy")add("design",1,.5,L("C1","C1"));
+ // 矛盾：點出、不抵消
+ const conf=CONF.filter(f=>f.when(c,a));const drop=new Set(conf.flatMap(f=>f.drop||[])),nul=new Set(conf.flatMap(f=>f.nul||[]));
+ let use=ins.filter(o=>!drop.has(o.id));
+ // 自填文字：只在該軸沒有反向答案時才加（寧可不加）
+ const kw=kwScan(c,a);const kwUsed=[];
+ kw.ax.forEach(h=>{if(nul.has(h.x)||use.some(o=>o.x===h.x&&o.v<0))return;use.push({x:h.x,v:1,w:W_KW,t:`依你的文字推測：${h.q} 寫了「${h.w}」`,id:"kw"});kwUsed.push(h)});
+ const p=Object.fromEntries(AX.map(x=>[x,0]));
+ AX.forEach(x=>{if(nul.has(x))return;const s=use.filter(o=>o.x===x);if(!s.length)return;
+  const sw=s.reduce((t,o)=>t+o.w,0);p[x]=s.reduce((t,o)=>t+o.v*o.w,0)/Math.max(sw,1)});
+ return {p,ins:use,conf,nul:[...nul],kw,kwUsed};
+}
+function prefVec(c,a){return analyze(c,a).p}
+function scoreCore(c,dislike,a,an){
+ an=an||analyze(c,a);const p=an.p;
  return ST.map(s=>{
   const contrib=AX.map((x,i)=>({x,v:p[x]*s.f[i]}));
   let sc=contrib.reduce((t,o)=>t+o.v,0);const why=[];
-  if(c.C1&&s.fit.includes(c.C1)){sc+=3;why.push({x:"C1",v:3})}
+  if(c.C1&&s.fit.includes(c.C1)){sc+=W_C1;why.push({x:"C1",v:W_C1})}
   const F=Object.fromEntries(AX.map((x,i)=>[x,s.f[i]]));const pen=[];
   (dislike||[]).forEach(d=>{
-   if(d==="太冷冰冰"&&(F.metal>=2||F.stone>=2)){sc-=2;pen.push(d)}
-   if(d==="太花太亂"&&F.busy>=2){sc-=2;pen.push(d)}
-   if(d==="太暗"&&F.bright<=-1){sc-=2;pen.push(d)}
-   if(d==="太空"&&F.busy<=-2){sc-=2;pen.push(d)}
-   if(d==="太舊"&&(s.k==="neo"||s.k==="french")){sc-=1;pen.push(d)}
-   if(d==="太亮太刺眼"&&F.bright>=2){sc-=1;pen.push(d)}
+   if(d==="太冷冰冰"&&(F.metal>=2||F.stone>=2)){sc-=W_DIS;pen.push(d)}
+   if(d==="太花太亂"&&F.busy>=2){sc-=W_DIS;pen.push(d)}
+   if(d==="太暗"&&F.bright<=-1){sc-=W_DIS;pen.push(d)}
+   if(d==="太空"&&F.busy<=-2){sc-=W_DIS;pen.push(d)}
+   if(d==="太舊"&&(s.k==="neo"||s.k==="french")){sc-=W_DIS2;pen.push(d)}
+   if(d==="太亮太刺眼"&&F.bright>=2){sc-=W_DIS2;pen.push(d)}
+   if(d==="太像樣品屋"&&(s.k==="lux"||s.k==="neo")){sc-=W_DIS2;pen.push(d)}
   });
-  return {s,sc,top:contrib.filter(o=>o.v>0).sort((a,b)=>b.v-a.v).slice(0,3),c1:why.length>0,pen};
+  const kh=an.kw.st[s.k];if(kh){sc+=W_KWS}
+  return {s,sc,top:contrib.filter(o=>o.v>0).sort((a,b)=>b.v-a.v).slice(0,3),c1:why.length>0,pen,kw:kh||null};
  }).sort((a,b)=>b.sc-a.sc);
 }
+/* 逐題替換：只換屋主已答的感受題（單選換成其他選項或不答；複選切換一個選項），不替屋主補沒答的題 */
+function altAnswers(c){
+ const out=[];
+ CH.filter(ch=>ch.feel).forEach(ch=>ch.qs.forEach(q=>(q.type==="group"?q.items:[q]).forEach(it=>{
+  const k=it.key;if(!k||it.type==="text")return;const cur=c[k];
+  if(cur==null||cur===""||(Array.isArray(cur)&&!cur.length))return;
+  const vals=(it.opts||[]).map(o=>Array.isArray(o)?o[0]:o).concat(it.none?["none"]:[]);
+  if(Array.isArray(cur)){vals.forEach(v=>{let nx;if(v==="none")nx=cur.includes("none")?[]:["none"];else nx=cur.includes(v)?cur.filter(x=>x!==v):cur.filter(x=>x!=="none").concat([v]);
+    if(it.max&&nx.length>it.max)return;out.push({q:q.id,k,v:nx})})}
+  else vals.concat([undefined]).forEach(v=>{if(v!==cur)out.push({q:q.id,k,v})});
+ })));
+ return out;
+}
+function score(c,dislike,a){
+ a=a||(typeof S!=="undefined"&&S.a)||{};const an=analyze(c,a);
+ const r=scoreCore(c,dislike,a,an);
+ // 敏感度：改一題就能當第一名的方向＝並列
+ const flip={};
+ if(r.length&&Object.keys(c).length)altAnswers(c).forEach(o=>{const c2=Object.assign({},c,{[o.k]:o.v});
+  const r2=scoreCore(c2,c2.C11,a);const k=r2[0].s.k;if(k!==r[0].s.k&&!flip[k])flip[k]=o.q});
+ r.tie=r.filter(o=>o===r[0]||flip[o.s.k]).slice(0,3);r.flip=flip;r.an=an;r.conf=an.conf;
+ return r;
+}
 const C1N={quiet:"安靜下來",energy:"充電有活力",cozy:"被包住的安心",lively:"熱鬧有人氣"};
-function keywords(c){const p=prefVec(c);const k=[];if(c.C1)k.push(C1N[c.C1]);AX.forEach(x=>{if(p[x]>=1)k.push(AXN[x]);else if(p[x]<=-1)k.push(AXNEG[x])});return k.slice(0,8)}
+function keywords(c){const p=prefVec(c);const k=[];if(c.C1)k.push(C1N[c.C1]);AX.forEach(x=>{if(p[x]>=.5)k.push(AXN[x]);else if(p[x]<=-.5)k.push(AXNEG[x])});return k.slice(0,8)}
+function confText(r){return (r.conf||[]).map(f=>f.t)}
+function tieText(r){return r.tie&&r.tie.length>1?`改一題答案名次就會對調，這幾個方向都適合你：${r.tie.map(o=>o.s.n).join("、")}`:""}
 
 /* ===== 結果 ===== */
 /* 每個軸是哪一題的答案推出來的（推薦理由要引用客人自己的答案） */
+/* 2026-11-13 計分 v2：理由引用支撐這個軸的每一題（多題合成），自填文字推測另標 */
 function said(x,c){
- const q=(id,k)=>c[k]!=null&&c[k]!==""&&!(Array.isArray(c[k])&&!c[k].length)?`${id} 選了「${fmt(c[k])}」`:"";
- if(["wood","stone","fabric","metal","clay"].includes(x))return (c.C5||[]).includes(x)?`C5 選了「${OPTN[x]}」`:"";
- return ({bright:q("C2","C2"),warm:q("C6","C6b")||q("C2","C2b"),enclose:q("C3","C3"),busy:q("C4","C4"),dark:q("C6","C6a"),
-  pattern:q("C7","C7"),nature:q("C8","C8"),curve:q("C12","C12"),design:q("C13","C13")})[x]||"";
+ const an=analyze(c),v=an.p[x];if(!v)return "";
+ const ts=[...new Set(an.ins.filter(o=>o.x===x&&Math.sign(o.v)===Math.sign(v)&&o.id!=="kw").map(o=>o.t))].slice(0,2);
+ return ts.join("、");
 }
+function saidKw(x,c){const an=analyze(c),v=an.p[x];if(!(v>0))return "";const k=an.ins.find(o=>o.x===x&&o.id==="kw");return k?k.t:""}
 function trait(x,f){return f>0?AXN[x]:AXNEG[x]}
 function reasonList(r,c){
  const out=[];
- if(r.c1)out.push(`你在 C1 選了「${C1N[c.C1]}」，這是這個方向最擅長的氛圍`);
- r.top.forEach(o=>{const t=said(o.x,c);const i=AX.indexOf(o.x);if(t)out.push(`你在 ${t}，正好對上它「${trait(o.x,r.s.f[i])}」的特質`)});
- return out.slice(0,3);
+ if(r.c1)out.push(`你在 C1 選了「${C1N[c.C1]}」，這是這個方向最擅長的氛圍（C1 是核心題，影響較大）`);
+ r.top.forEach(o=>{const t=said(o.x,c);const i=AX.indexOf(o.x);if(t){const k=saidKw(o.x,c);out.push(`你在 ${t}${k?`（另${k}）`:""}，正好對上它「${trait(o.x,r.s.f[i])}」的特質`)}else{const k=saidKw(o.x,c);if(k)out.push(`${k}，對上它「${trait(o.x,r.s.f[i])}」的特質`)}});
+ if(r.kw)out.push(`依你的文字推測：${r.kw.q} 寫了「${r.kw.w}」，和這個方向的印象接近（只小幅加分）`);
+ return out.slice(0,4);
 }
 function excludeList(r,c){
  const p=prefVec(c);
@@ -960,7 +1066,12 @@ function answersText(){
  const rows=qRows(S.c[0]);rows.forEach(r=>out+=r.h?`\n【${r.h}】\n`:`- ${r.q}：${r.v}\n`);
  if(two){out+="\n【C　你喜歡的感覺｜第二位】\n";CH[2].qs.forEach(q=>{if(q.type==="group")q.items.forEach(it=>out+=`- ${q.id}｜${it.label}：${fmt(S.c[1][it.key])}\n`);else out+=`- ${q.id} ${q.t}：${fmt(S.c[1][q.key])}\n`})}
  const r=score(S.c[0],S.c[0].C11);
- out+=`\n【工具推算的風格方向（方向參考，不是診斷）】\n`+r.slice(0,3).map((x,i)=>`${i+1}. ${x.s.n}（${x.sc.toFixed(1)} 分）`).join("\n");
+ const tieK=new Set((r.tie||[]).length>1?r.tie.map(o=>o.s.k):[]);
+ out+=`\n【工具推算的風格方向（方向參考，不是診斷）】\n`+r.slice(0,3).map((x,i)=>`${i+1}. ${x.s.n}（${x.sc.toFixed(1)} 分）${tieK.has(x.s.k)?"［並列］":""}${x.kw?`［含依自填文字推測加分：${x.kw.q}「${x.kw.w}」］`:""}`).join("\n");
+ if(tieK.size)out+=`\n名次穩定度：${tieText(r)}（逐題替換答案測試，改一題就會換第一名，請不要排先後）`;
+ else if(r.length)out+=`\n名次穩定度：逐題替換答案測試，改任一題都不會換第一名`;
+ const cf=confText(r);if(cf.length)out+=`\n答案衝突（這兩項看起來衝突，和設計師先談；工具沒有互相抵消）：\n`+cf.map(x=>`- ${x}`).join("\n");
+ const ku=(r.an&&r.an.kwUsed)||[];if(ku.length)out+=`\n依自填文字推測（只小幅加分）：`+ku.map(h=>`${h.q}「${h.w}」→${AXN[h.x]}`).join("、");
  out+=`\n分數最低：`+excludeList(r,S.c[0]).map(o=>`${o.s.n}（${o.t}）`).join("；");
  out+=`\n感受關鍵字：${keywords(S.c[0]).join("、")}\n`;
  const fnT=f=>f.k==="laundry"&&!has(S.a.B6b,"洗曬衣")?"想少曬衣":f.t;  /* 照實反映：只有 D4 勾曬衣時不寫「討厭」 */
@@ -968,7 +1079,7 @@ function answersText(){
  const [h1,h2]=mxBoth(S.c[0],S.a),m1=mxText(h1),m2=mxText(h2);
  if(m1)out+=`\n【美感：答案對應到設計（括號內為依據等級）】\n${m1}\n`;
  if(m2)out+=`\n【機能：答案對應到設計（括號內為依據等級）】\n${m2}\n`;
- out+=`\n註：括號內為「依據等級：出處名稱」；「實務建議」沒有正式出處。E1、E2、C9、C10、F1 為自填，工具沒有對應規則，請依內容補設計意涵，並標為推論。\n`;
+ out+=`\n註：括號內為「依據等級：出處名稱」；「實務建議」沒有正式出處。E1、E2、C9、C10、F1 為自填；工具只對 C9、C10、F1 的明確關鍵字小幅加分（標「依自填文字推測」），其餘沒有對應規則，請依內容補設計意涵，並標為推論。\n`;
  return out.trim();
 }
 /* 兩段 AI 指令：照「AI指令定稿_v1_20261111.md」，<<答案>> 位置放客人答案 */
@@ -977,9 +1088,9 @@ const P_OWNER=`你是一位資深室內設計顧問，正在幫一位屋主讀�
 請用繁體中文、溫和直接的語氣，依下列順序回答，每段都要引用屋主自己的答案當理由，不要寫星座式的空泛描述：
 
 1. 你要的是什麼樣的家：用一句話總結（例：「你要的是一個能安靜下來、被柔光包住的家」），再列 3～4 個感受關鍵字。
-2. 為什麼是這三個風格方向：逐一說明工具推薦的前三個方向，各寫 2～3 句理由，每句指出是哪幾題的答案導向它。
+2. 為什麼是這三個風格方向：逐一說明工具推薦的前三個方向，各寫 2～3 句理由，每句指出是哪幾題的答案導向它；工具標「並列」的方向不要排先後，直接說「這幾個方向都適合你」；標「依自填文字推測」的理由要照實寫是推測。
 3. 為什麼不是另外幾種：挑分數最低的 1～2 個風格，說明是哪些答案讓它被排除（例：你勾了「太冷冰冰」）。
-4. 你自己可能沒注意到的事：從「最放鬆的地方」「讓你開心的東西」「一句話」三個開放題，找出 1～2 個隱藏偏好；若答案之間有矛盾（例：喜歡留白卻收藏很多），溫和點出並給一個兩全的想法。
+4. 你自己可能沒注意到的事：從「最放鬆的地方」「讓你開心的東西」「一句話」三個開放題，找出 1～2 個隱藏偏好；工具列出「答案衝突」的，逐條照列、寫「這兩項看起來衝突，和設計師先談」，不要自己判定哪個才對、也不要互相抵消（例：喜歡留白卻收藏很多）。
 5. 生活上要先規劃的事：把工具列出的機能提醒，依「格局（客變時就要決定）」「設備與水電」「家具與收納」分三組，各用一句白話說明為什麼重要；工具標為「實務建議」的，請照實標示，不要說成研究結論。
 6. 帶去給設計師的 5 個問題：寫成屋主可以直接念出來的句子，優先問最影響格局與預算的事。
 7. 兩人分開答時（答案裡有 P2）：列出兩人一致的地方、差最多的兩件事，並給一個「先談這個」的建議。
@@ -1001,7 +1112,7 @@ const P_DESIGNER=`你是一位資深室內設計師的助理，要把屋主填�
 4. 機能需求清單：依「格局／動線／設備水電／收納／家具／五感（聲、光、溫濕、氣味）」分類，每條保留工具給的依據與等級，標出哪些必須在客變截止前決定。
 5. 需要追問的問題：列 8～10 題，針對答案模糊、互相矛盾、或攸關預算與格局的地方，每題說明為什麼要問（追問「為什麼」，挖出真實需求）。
 6. 兩人分開答時：並列兩人的關鍵差異，建議會議中先處理的順序。
-7. 不確定與限制：哪些結論是推論、哪些答案缺漏，照實列出。
+7. 不確定與限制：哪些結論是推論、哪些答案缺漏，照實列出；工具列出的「答案衝突」逐條放進第 5 段追問，工具標「並列」的方向不排先後。
 
 規則：
 - 不編造數據、法規或研究，不把「實務建議」寫成研究結論。
@@ -1015,14 +1126,17 @@ function renderResult(){
  const a=S.a,c=S.c[0],two=!!a.A4;
  const r=score(c,c.C11);const top=r.slice(0,3);
  const kw=keywords(c);
- const pn=top.length>1&&Math.abs(top[0].sc-top[1].sc)<=Math.abs(top[0].sc)*.1?pairNote(top[0].s.k,top[1].s.k):"";
+ const tieK=new Set(r.tie&&r.tie.length>1?r.tie.map(o=>o.s.k):[]);
+ const pn=tieK.has(top[0].s.k)&&top[1]&&tieK.has(top[1].s.k)?pairNote(top[0].s.k,top[1].s.k):"";
+ const cf=confText(r);
  const boards=top.map(x=>board(x.s,c));
  const dirs=top.map((x,i)=>{const b=boards[i];return `<article class="dir${i%2?" alt":""}">
-  <div class="meta"><div class="n">0${i+1}</div><h4>${x.s.n}</h4><div class="ref">${x.s.en}</div>
+  <div class="meta"><div class="n">${tieK.has(x.s.k)?"並列":"0"+(i+1)}</div><h4>${x.s.n}</h4><div class="ref">${x.s.en}</div>
   <p class="mood">${x.s.mood}</p>
   <h6>為什麼推薦給你</h6>
   <ul>${reasonList(x,c).map(t=>`<li>${esc(t)}</li>`).join("")||"<li>你的感受答案還不多，先當參考方向</li>"}</ul>
   <div class="warn">注意：${x.s.warn}</div>
+  ${x.s.sref?`<div class="src">特徵依據：${esc(x.s.sref)}</div>`:""}
   ${b.note?`<div class="adj">${esc(b.note)}</div>`:""}</div>
   <div>${b.html}</div></article>`}).join("");
  const exc=excludeList(r,c);
@@ -1054,7 +1168,9 @@ function renderResult(){
   <p class="stamp">方向參考，不是診斷</p>
   <div class="sec-t" style="margin-top:0;border-top:0;padding-top:0"><b>I</b><h3>美感：三個方向</h3></div>
   <div class="mapbox"><div>${mapSvg(c,top)}</div><div class="mapnote"><h5>感受座標</h5><p>「你」是依你在「你喜歡的感覺」一章的答案算出的位置；13 個點是各風格的位置，編號 1～3 是推薦給你的方向。離你越近，感受越接近。</p><p class="note">座標軸為本工具編輯整理，方向參考，不是診斷。</p></div></div>
-  ${pn?`<div class="pair"><b>前兩名很接近，兩個都值得看：</b>${esc(pn)}</div>`:""}
+  ${tieK.size?`<div class="pair"><b>這幾個方向都適合你：</b>${esc(r.tie.map(o=>o.s.n).join("、"))}。程式逐題替換你的答案重算，改一題名次就會對調，所以不排先後。${pn?esc(pn):""}</div>`:`<p class="note">名次穩定：程式逐題替換你的答案重算，改任一題都不會換第一名。</p>`}
+  ${cf.length?`<div class="pair conf"><b>這兩項看起來衝突，和設計師先談：</b><ul>${cf.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><span class="note">工具沒有把衝突的答案互相抵消，衝突的部分先不計分。</span></div>`:""}
+  ${(k=>k.length?`<p class="note">依你的文字推測（只小幅加分）：${esc(k.map(h=>`${h.q} 寫了「${h.w}」→偏${AXN[h.x]}`).concat(r.filter(o=>o.kw).slice(0,3).map(o=>`${o.kw.q} 寫了「${o.kw.w}」→接近${o.s.n}`)).join("；"))}</p>`:r.some(o=>o.kw)?`<p class="note">依你的文字推測（只小幅加分）：${esc(r.filter(o=>o.kw).slice(0,3).map(o=>`${o.kw.q} 寫了「${o.kw.w}」→接近${o.s.n}`).join("；"))}</p>`:"")(r.an.kwUsed||[])}
   ${dirs}
   <div class="excl"><h5>為什麼不是這兩種</h5><ul>${exc.map(o=>`<li><b>${o.s.n}</b>分數最低：${esc(o.t)}</li>`).join("")}</ul></div>
   ${(h=>h?`<div class="mx-t"><h4>你的感受，對應到設計</h4><p class="note">依你在「你喜歡的感覺」的答案，按十個設計面向整理；每條標依據等級。</p></div>${h}`:"")(mxHtml(mxBoth(c,a)[0]))}
@@ -1072,6 +1188,7 @@ function renderResult(){
   </div>
   <div class="sec-t"><b>${sec[3]}</b><h3>你的全部答案</h3></div>
   ${drawer(`<span class="dtags"><em>答案回顧</em></span>`,`${rows.filter(r=>!r.h).length} 題・展開核對或回去修改`,`<table class="sum">${rows.map(r=>r.h?`<tr class="h"><th colspan="2">${esc(r.h)}</th></tr>`:`<tr><th>${esc(r.q)}</th><td>${esc(r.v)}</td></tr>`).join("")}</table>`)}
+  <details class="credits"><summary>計分方式與依據</summary><ol>${SCORE_REF.map(x=>`<li>${esc(x[0])}｜${esc(x[1])}（${esc(x[2])}）</li>`).join("")}</ol></details>
   <div class="disc">方向參考，不是診斷；最後仍以和設計師的討論為準。這份工具參考了國際與台灣的居住研究：研究發現個性推不出風格，所以我們不測個性，只問你對光、材質、線條和空間的感受。計分規則尚未經大規模真人驗證。</div>
   <div class="actions"><button class="btn solid" data-print>列印／另存 PDF <span class="arr">→</span></button><button class="btn" data-go="A">修改答案</button><button class="link" data-reset>清除答案重新開始</button></div>
   <details class="credits"><summary>照片出處（材質擺拍為本機 AI 生成示意圖；題目照片來自 Unsplash，免費可商用授權）</summary><ol>${DATA.credit.map(x=>`<li>${esc(x.n)}｜${esc(x.a)}${x.u?`｜<a href="${x.u}" target="_blank" rel="noopener">unsplash</a>`:""}</li>`).join("")}</ol></details>
